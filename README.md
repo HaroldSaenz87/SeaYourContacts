@@ -50,7 +50,7 @@ The main dashboard where users can add, search, filter, edit, and delete their c
 
 | Name             | Role                                        |
 |------------------|---------------------------------------------|
-| Harold (me)      | Frontend Development                        |
+| Harold           | Frontend Development                        |
 | Rae              | API Development                             |
 | Nicholas         | API Development                             |
 | Nia              | Database                                    |
