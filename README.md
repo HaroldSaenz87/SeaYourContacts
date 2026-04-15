@@ -67,6 +67,9 @@ The main dashboard where users can add, search, filter, edit, and delete their c
 
 ---
 
+## DEMO
+[▶ Watch Demo](https://drive.google.com/file/d/1SkjKbnJ2VyLiusSuEOW6Da2L1gU7hWGE/view?usp=sharing)
+
 ## 📄 License
 
 This project was built for educational purposes
