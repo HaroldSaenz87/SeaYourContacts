@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Quicksand:wght@300..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="css/account.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Account</title>
+</head>
+<body>
+    
+    <div role="main" class="account-container">
+
+        <div class="header">
+
+            <div class="my_account">
+
+                <p id="accountName"></p>
+
+                <img src="assets/account_icon.svg" alt="Account icon">
+
+                <div class="dropdown">
+
+                    <img src="assets/menu_icon.svg" alt="Menu icon">
+
+                    <div class="dropdown_Logout">
+                        <p id="loggingOut">Logout</p>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="top_right">
+
+                <div class="filter">
+
+                    <img class="filterOption" src="assets/filter2_icon.svg" alt="Filter icon">
+                    
+                    <div class="filterDrop" id="filterMenu">
+                        
+                        <label><input type="checkbox" id="first">First Name</label>
+                        
+                        <label><input type="checkbox" id="last">Last Name</label>
+
+                        <label><input type="checkbox" id="emailFilter">Email</label>
+
+                        <label><input type="checkbox" id="phoneFilter">Phone</label>
+
+                    </div>
+
+                </div>
+
+                <div class="searchContainer">
+
+                    <img class="searchIcon" src="assets/search_icon.svg" alt="Search icon">
+                    
+                    <input type="text" id="search" placeholder="Search contacts">
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+        <div class="middle">
+
+            <div class="add-contacts">
+
+                <form id="addContactsForm">
+                    
+                    <div class="top">
+                        <div class="circle">
+                            <img src="assets/add_white_icon.svg" alt="Add icon">
+                        </div>
+                        
+                        <h2>Add New Contact</h2>
+                    </div>
+
+                    <label for="firstName">First Name</label>
+                    <input type="text" id="firstName" placeholder="Enter first name" required>
+
+                    <label for="lastName">Last Name</label>
+                    <input type="text" id="lastName" placeholder="Enter last name" required>
+                    
+                    <label for="email">Email</label>
+                    <input type="email" id="email" placeholder="Example@gmail.com" required>
+
+                    <label for="phone">Phone</label>
+                    <input type="tel" id="phone" placeholder="555-555-5555" required>
+
+                    <button type="submit" id="saveContact">Save Contact</button>
+                    
+                    <span id="addResult"></span>
+                    
+                </form>
+
+            </div>
+
+            <div class="contactColumn">
+                            
+                <div class="rightSide">
+                    <img src="assets/groups_icon.svg" alt="">
+                    <h2>My Contacts</h2>
+
+                </div>
+
+                <div class="my-contacts">
+                    
+                    <div class="contacts">
+
+                    
+                    </div>
+                
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+    
+   <!---This is the edit contact Modal-->
+   <div class="modal" id="editContacts">
+        <div class="editContent">
+            <div class="modalTop">
+                <h2>Edit Contact</h2>
+                <span class="exitBtn" onclick="closeModal()">X</span>
+            </div>
+
+            <form id="editFormContact">
+
+                <input type="hidden" id="editId">
+
+                <label for="editFirst">First Name</label>
+                <input type="text" id="editFirst" required>
+
+                <label for="editLast">Last Name</label>
+                <input type="text" id="editLast" required>
+
+                <label for="editEmail">Email</label>
+                <input type="email" id="editEmail" required>
+
+                <label for="editPhone">Phone</label>
+                <input type="tel" id="editPhone" required>
+
+                <div class="actionsModal">
+                    <button type="submit" class="UpdateContact">Update</button>
+                    <button type="button" class="cancelBtn" onclick="closeModal()">Cancel</button>
+                </div>
+
+                <span id="editResults"></span>
+
+            </form>
+
+        </div>
+   </div>
+
+   <!---This is the delete contact Modal-->
+   <div class="modal2" id="deleteContactsModal">
+        <div class="deleteContent">
+            <div class="deleteModalTop">
+                <h3>Are you sure you want to delete this contact?</h3>
+            </div>
+
+            <form id="deleteContactForm">
+
+                <div class="actionsModal">
+                    <button type="submit" class="UpdateContact">Yes</button>
+                    <button type="button" class="cancelBtn" onclick="closeDelete()">No</button>
+                </div>
+
+                <span id="editResults"></span>
+
+            </form>
+
+        </div>
+   </div>
+
+
+    <script src="./js/myAccount.js"></script>
+    
+</body>
+</html>
